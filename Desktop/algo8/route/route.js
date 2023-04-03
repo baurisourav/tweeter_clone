@@ -21,3 +21,5 @@ router.post('/follow',auth.authentication,followController.follow)
 router.post('/getfollowers',followController.displayFollowers)
 
 
+module.exports=router;
+
