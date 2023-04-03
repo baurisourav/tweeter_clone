@@ -1,6 +1,7 @@
 const express=require("express")
 const app=express()
 const bodyparser=require('body-parser')
+const router=require('./route/route')
 
 app.use(bodyparser.json())
 const mongoose=require("mongoose")
@@ -12,7 +13,7 @@ mongoose.connect('mongodb+srv://souravbauri:Alluarya1234@cluster0.ydupgt5.mongod
   console.log(err)
 });
 
-
+app.use('/',router)
 
 app.listen(3000,(err)=>{
 if(err){console.log(err)}
